@@ -4,8 +4,8 @@ describe('Create New User Account', () => {
     it('Validate that a new user can successfully register using the "Signup / Login" page.', () => {
         cy.visit('https://automationexercise.com/')
         cy.get('.fa-lock').click()
-        cy.findByDataQa("signup-name").type("Roaa")
-        cy.findByDataQa("signup-email").type("Roaa@Gh.com")
+        cy.findByDataQa("signup-name").type("Roaagh")
+        cy.findByDataQa("signup-email").type("Roaagh@Gh.com")
         cy.findByDataQa("signup-button").click()   
         cy.get('#id_gender2').check()
         cy.findByDataQa("password").type("1234")
@@ -33,11 +33,7 @@ describe('User Login', () => {
         cy.get('.fa-lock').click()
         cy.findByDataQa("login-email").type("Roa@Gh.com") 
         cy.findByDataQa("login-password").type("1234")
-        cy.findByDataQa("login-button").click()   
-        
-
-
-      
+        cy.findByDataQa("login-button").click()    
     });
     
 });
