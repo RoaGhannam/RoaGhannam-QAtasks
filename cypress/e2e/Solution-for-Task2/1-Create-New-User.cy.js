@@ -4,8 +4,8 @@ describe('Create New User Account', () => {
     it('Validate that a new user can successfully register using the "Signup / Login" page.', () => {
         cy.visit('https://automationexercise.com/')
         cy.get('.fa-lock').click()
-        cy.findByDataQa("signup-name").type("Roaagh")
-        cy.findByDataQa("signup-email").type("Roaagh@Gh.com")
+        cy.findByDataQa("signup-name").type("Roaaagh")
+        cy.findByDataQa("signup-email").type("Roaaagh@Gh.com")
         cy.findByDataQa("signup-button").click()   
         cy.get('#id_gender2').check()
         cy.findByDataQa("password").type("1234")
