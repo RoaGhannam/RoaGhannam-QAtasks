@@ -8,8 +8,8 @@ describe('Create New User Account', () => {
         cy.findByDataQa("signup-name").should('be.visible');
         cy.findByDataQa("signup-email").should('be.visible');
         cy.findByDataQa("signup-button").should('be.visible');
-        cy.findByDataQa("signup-name").type("Roaaaagh")
-        cy.findByDataQa("signup-email").type("Roaaaagh@GH.com")
+        cy.findByDataQa("signup-name").type("Roaghannam")
+        cy.findByDataQa("signup-email").type("Roaghannam@GH.com")
         cy.findByDataQa("signup-button").click()   
         cy.contains('b', 'Enter Account Information').should('be.visible');
         cy.get('#id_gender2').should('be.visible');
@@ -48,10 +48,10 @@ describe('Create New User Account', () => {
 
     it('Validate that a new user can successfully register using the "Signup / Login" page.', () => {
         cy.visit('https://automationexercise.com/login')
-        cy.findByDataQa("signup-name").type("Roaaaagh")
-        cy.findByDataQa("signup-email").type("Roaaaagh@GH.com")
+        cy.findByDataQa("signup-name").type("Roaghannam")
+        cy.findByDataQa("signup-email").type("Roaghannam@GH.com")
         cy.findByDataQa("signup-button").click()   
-        cy.get('#id_gender2').check()
+        cy.get('#id_gender2').check();
         cy.findByDataQa("password").type("1234")
         cy.get('#days').select('29')
         cy.get('#months').select('March')

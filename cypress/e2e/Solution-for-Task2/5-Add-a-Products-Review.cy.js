@@ -2,7 +2,7 @@
 
 
 describe('Add a Product Review', () => {
-    it('', () => {
+    it('Verify that all mandatory field should be visible on Product Review form', () => {
         cy.visit('https://automationexercise.com/product_details/1')
         cy.contains('h2', 'Blue Top').should('be.visible');
         cy.contains('a', 'Write Your Review').should('be.visible');
@@ -12,7 +12,7 @@ describe('Add a Product Review', () => {
         cy.get('#button-review').should('be.visible');
     });
     it('Validate that a logged-in user can add a review to a product', () => {
-cy.visit('https://automationexercise.com/')
+        cy.visit('https://automationexercise.com/')
         cy.get('.fa-lock').click()
         cy.findByDataQa("login-email").type("Roa@Gh.com") 
         cy.findByDataQa("login-password").type("1234")
