@@ -2,7 +2,7 @@
 
 
 describe('Search for a Product', () => {
-    it('', () => {
+    it('Verify that all mandatory field should be visible on search form', () => {
         cy.visit('https://automationexercise.com/')
         cy.get('.fa-lock').click()
         cy.findByDataQa("login-email").type("Roa@Gh.com") 

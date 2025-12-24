@@ -10,8 +10,10 @@ describe('Add Product to Cart', () => {
         cy.findByDataQa("login-button").click() 
         cy.get('a[href="/products"]').click()
         cy.get('.add-to-cart').eq(0).click()
-        cy.get('.btn-success').click()
-        cy.get('.add-to-cart').eq(2).click()
+        cy.contains('View Cart').click();
+        cy.get('a[href="/product_details/1"]').should('be.visible');
+        
     });
+    
     
 });
