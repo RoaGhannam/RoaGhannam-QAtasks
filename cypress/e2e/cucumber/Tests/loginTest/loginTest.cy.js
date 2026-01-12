@@ -17,5 +17,7 @@ When("The user clicks on login button", () => {
 });
 
 Then("The user will be redirected to the Swag Labs page", () => {
-  cy.get(".inventory_list").should("be.visible");
+  cy.contains("Swag Labs").should("be.visible");
+  cy.url().should("eq", "https://www.saucedemo.com/inventory.html");     
+  cy.get("#react-burger-menu-btn").should("be.visible");
 });
