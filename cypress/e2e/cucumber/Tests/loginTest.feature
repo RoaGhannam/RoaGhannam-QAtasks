@@ -3,7 +3,7 @@ Feature: login functionality
     Background:
         Given The user navigate to the login page
 
-        Scenario: Validate that the user can login with valid users 
+        Scenario Outline: Validate that the user can login with valid users 
         When The user enter "<username>" in username field
         And The user enter "<password>" in password field
         And The user clicks on login button
